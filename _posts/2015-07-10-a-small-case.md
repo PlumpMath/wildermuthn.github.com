@@ -34,7 +34,7 @@ Clojurescript's version of switch, `case`, although compact, doesn't offer a com
 
 It's likely that both our pricing function and our percentage discounts will be dynamic, generated according to circumstance. In that case, our small cases fail. We need an abstraction that allows us to separate data from functionality.
 
-An smarter alternative to `switch` is to simply separate data from functionality.
+An smarter alternative to `switch` is to just not use one.
 
 ```js
 /* Data */
