@@ -84,9 +84,6 @@ Two things stand out: self-documenting destructuring and a pipeline of functions
 Separating out the steps of the data transformation creates room for powerful modifications. For example, replacing the pricing function with a custom function is simple:
 
 ```clj
-(defn half-off [discount-rate price]
-    (* .5 discount-rate price))
-
 (defn pricer [{:keys [type price] :as order}
               {:keys [default] :as rates}
               custom-pricer]
@@ -94,6 +91,9 @@ Separating out the steps of the data transformation creates room for powerful mo
       (get type)
       (or default)
       (custom-pricer price))) ;; vs. (* price)
+
+(defn half-off [discount-rate price]
+    (* .5 discount-rate price))
 
 (pricer order rates half-off)
 ```
