@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Clojurescript and the Blub Paradox"
-description: ""
+description: "Clojurescript as an objectively superior language than Javscript"
 category:
 tags: []
 ---
