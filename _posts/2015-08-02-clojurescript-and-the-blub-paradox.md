@@ -9,7 +9,7 @@ tags: []
 
 >Blub is good enough for him, because he thinks in Blub.
 
->&mdash; Paul Graham (<a href="http://cnn.com">Beating the Averages</a>)
+>&mdash; Paul Graham (<a href="http://www.paulgraham.com/avg.html">Beating the Averages</a>)
 
 Javascript is a Blub &mdash; a mediocre programming language of objectively less power than others. Yet Javascript has one great advantage: it is ubiquitous, running in browsers, servers, smartphones, and even microcontrollers. But what if you could replace Javascript with a more powerful language such as Lisp? What would you get?
 
