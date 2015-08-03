@@ -64,7 +64,7 @@ The JS and CLJS solutions don't differ dramatically in terms of logic, but CLJS 
 
 ## The Shrug of Misidentification
 
-Differences in code caused the Blub Programmer to fixate on what programmers tend to do all day long: write code, test code, maintain code, expand code, debug code, and read a lot of code written by other people. The anxiety experienced in reading unintelligable code isn't unwarranted. But this anxiety over code is a red-herring. It isn't the code that is important, but rather the mindset and patterns of problem-solving that our programming language encourages.
+Differences in code caused the Blub Programmer to fixate on what programmers tend to do all day long: write code, test code, maintain code, expand code, debug code, and read a lot of code written by other people. The anxiety experienced in reading unintelligible code isn't unwarranted. But this anxiety over code is a red-herring. It isn't the code that is important, but rather the mindset and patterns of problem-solving that our programming language encourages.
 
 Let's look at the code again, but this time going through the most likely pattern of thoughts that generated the solution.
 
