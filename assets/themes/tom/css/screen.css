@@ -199,18 +199,28 @@ ul.posts span {
 #post ol {
     margin-left: 1.35em;
     font-family: 'Latin Modern Roman', Georgia, 'Times New Roman', Times, serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 27px;
 }
 
-#post code, #post .code {
-    font-weight: bold;
-    padding: 0;
-}
-
+#post ol code,
+#post ul code,
 #post p code {
     background-color: rgb(245, 245, 245);
-    border: 1px solid rgb(223, 223, 223);
-    padding: 1px 4px;
-    color: #a00;
+    border: 1px solid rgba(226, 226, 226, 0.29);
+    padding: 0px 6px;
+    color: #AA0000;
+    text-transform: uppercase;
+    font-family: courier;
+    font-weight: bolder;
+    font-size: 13px;
+
+    /* background-color: rgb(245, 245, 245); */
+    /* border: 1px solid rgb(223, 223, 223); */
+    /* padding: 1px 4px; */
+    /* color: #a00; */
 }
 
 #post pre code {
@@ -241,11 +251,16 @@ ul.posts span {
 /* Customizations */
 
 blockquote {
-    font-family: 'Latin Modern Roman', Georgia, 'Times New Roman', Times, serif;
-    padding: 20px 30px 10px 30px;
-    border: 1px solid black;
-    margin: 15px 0;
+    padding: 5px 20px;
+    margin: 30px 0 30px 0;
+    border-left: 1px solid rgb(226, 226, 226);
+    border-right: 1px solid rgb(226, 226, 226);
+    /* font-family: 'Latin Modern Roman', Georgia, 'Times New Roman', Times, serif; */
+    /* padding: 20px 30px 10px 30px; */
+    /* border: 1px solid black; */
+    /* margin: 15px 0; */
 }
+
 
 #post p {
     font-family: 'Latin Modern Roman', Georgia, 'Times New Roman', Times, serif;
@@ -258,6 +273,12 @@ blockquote {
     font-size: 11px;
     text-transform: uppercase;
     color: #666;
+}
+
+#post blockquote p {
+  font-style: normal;
+  font-family: 'Inconsolata', monospace;
+  font-size: 14px;
 }
 
 .MathJax .noError {
