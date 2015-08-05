@@ -87,7 +87,7 @@ Let's look at the code again, but this time going through the most likely patter
 > vs.<BR>
 > 4\. Given a pattern, identify abstractions.
 
-Just at the step where the most important analytical effort occurs, JavaScript's deficiencies abort logical thought with axiomatic warnings: `switch` statements should be avoided due to `break` bugs. The JavaScript mindset suddenly shifts from problem-solving to damage-control, avoiding the language's "ugly parts". We compound this problem by doing what smart people do: we absorb this knowledge and begin to skip steps, and in doing so, skip *thought patterns* for building better abstractions.
+Just at the step where the most important analytical effort occurs, JavaScript's deficiencies abort logical thought with axiomatic warnings: `switch` statements should be avoided due to `break` bugs. The JavaScript mindset suddenly shifts from problem-solving to damage-control, avoiding the language's "ugly parts". We compound this problem by doing what smart people do: we absorb this knowledge and begin to skip steps 3 and 4 entirely, and in doing so, skip *thought patterns* for building better abstractions.
 
 ClojureScript does the opposite. Instead of seeking to avoid the danger of using *one* bug-prone function, it provides *three* types of switch statements, each suited to different kinds of control flow. These options not only allow one to engage in high-level forms of abstraction, but actually encourage this kind of thinking. Moreover, the entire pattern of thought begins at a much higher level, seeking to recognize patterns even before fully understanding the solution.
 
