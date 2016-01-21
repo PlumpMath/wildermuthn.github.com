@@ -39,7 +39,7 @@ So how should I approach this according to Functional Programming principles? Wh
 * Immutable data
 * Bottom-up functions
 
-### Immutable Data
+### Data
 
 First, put your data where it belongs: in immutable structures.
 
@@ -57,7 +57,7 @@ First, put your data where it belongs: in immutable structures.
   {:express 2})
 ```
 
-### Good Data
+### More Data
 
 > "Garbage in, garbage out"
 
