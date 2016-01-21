@@ -36,8 +36,8 @@ There's nothing especially wrong with such logical step-by-step thinking, but I'
 
 So how should I approach this according to Functional Programming principles? What are those principles? There's no definitive list, but I like these:
 
-* Bottom-up programming with discrete functions
 * Immutable data structures
+* Bottom-up programming with discrete functions
 
 ### Data
 
