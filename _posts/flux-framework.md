@@ -1,25 +1,38 @@
 ---
 layout: post
-title: "The Ultimate Flux Framework"
+title: "Porting a Production Application from Angular to ClojureScript"
 description: ""
 category:
 tags: []
 ---
 {% include JB/setup %}
 
+In 2012, Angular felt like a gift from the gods: data and DOM fused together, if one part changed, the other part did too. No more event listeners. No more manipulating the DOM. Just pure power.
+
+Armed with that power, last year I began work on an ambitious project: a video management and analytics app, more akin to a desktop program than a dynamic web-page. And in one month, I declared the project complete, feeling brilliant and amazing for having met all my deadlines and requirements.
+
+Then the bug reports started pouring in. And for the next month, I played wack-a-mole.
+
+During this period of intense pressure, with each day revealing new problems, I began some deep reconsideration of my beloved framework. I noticed a pattern in the problems:  data and DOM fused together, when anything changed, everything else did too. No more control. Just pure power, gone rogue.
+
+
+## Angular in Production
+
+Keeping track of data mutation is easy when you don't have much data. But in building a Google Anlytics clone, my small team of three str
+
+
+
 Problems with Angular
 
 * Data Mutation in Controllers
 * Data Mutation in Services
 * Uncoordinated data mutation
-* Server-side rendering
 * Resort to deep cloning = SLOW
 
 React Solutions
 * Replace angular directives
 * Replace two-day data binding with one-way
-* Renders to string on server
-* Removing data mutation/watcherse = FAST
+* Removing data mutation/watchers = FAST
 
 Flux solutions
 * Replace service methods with actions
