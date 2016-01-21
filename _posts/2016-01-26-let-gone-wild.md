@@ -7,7 +7,7 @@ tags: []
 ---
 {% include JB/setup %}
 
-Clojure gives me the tools to write in a functional style, but I've found myself unconsciously using `let` and writing imperatively. Why? Probably because it is so easy:
+Clojure gives me the tools to write in a functional style, but I've found myself unconsciously using `let` to write imperatively. Why? Probably because it is so easy:
 
 ```clj
 (defn postage-cost [dimensions weight shipping-days]
