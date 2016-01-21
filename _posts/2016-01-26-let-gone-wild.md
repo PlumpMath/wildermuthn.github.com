@@ -63,7 +63,7 @@ First, put your data where it belongs: in immutable structures.
 
 > "Garbage in, garbage out."
 
-Every program has data that goes in, and then data that goes out. Instead of modelling data as objects, a good FP practice is to envision good data in, good data out:
+Every program basically transforms one set of data (input) into another set of data (output). While thinking imperatively causes me to jump to solution first, a functional approach causes me to look at data first. A simple way to structure this though process is to write down the raw data you expect a program to receive, and then (after putting aside the strong urge to solve the problem!), writing down the raw data you expect the program to produce:
 
 ```clj
 ;;; In
