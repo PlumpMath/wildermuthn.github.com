@@ -89,7 +89,7 @@ Every program's job is to transform data (input) into data (output). While think
 
 ### Transforming Data
 
-Now that we have the start and end of our journey through data, we can begin to think of solutions. But these solutions have a sharp focus: transforming data.
+Now that we have the start and end of our journey through data, we can begin to think of solutions. But these solutions have a sharp focus: transforming data from the bottom-up.
 
 1. Identify the next part of the data to update.
 2. Determine how to calculate the new data.
