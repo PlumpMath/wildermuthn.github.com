@@ -36,10 +36,11 @@ There's nothing especially wrong with such logical step-by-step thinking, but I'
 
 So how should I approach this according to Functional Programming principles? What are those principles? There's no definitive list, but I like these:
 
-* Immutable data structures
-* Bottom-up programming with discrete functions
+* Data
+* Functions
+* Data
 
-### Data
+### Immutable Data
 
 First, put your data where it belongs: in immutable structures.
 
@@ -57,16 +58,18 @@ First, put your data where it belongs: in immutable structures.
   {:express 2})
 ```
 
-### Bottom-up functions
+### Good Data
 
-> "It is better to have 100 functions operate on one data structure than 10 functions on 10 data structures." — Alan Perlis
+> "Garbage in, garbage out"
 
-> "Garbage in, garbage out."
+Every program's job is to transform data (input) into data (output). While thinking imperatively leads me to first seek solutions, thinking functionally leads me to first seek data:
 
-Every program basically transforms one set of data (input) into another set of data (output). While thinking imperatively causes me to jump to solution first, a functional approach causes me to look at data first. A simple way to structure this though process is to write down the raw data you expect a program to receive, and then (after putting aside the strong urge to solve the problem!), writing down the raw data you expect the program to produce:
+1. Write down the raw data you expect as input.
+2. Put away the urge to solve the problem.
+3. Write down the raw data you expect as output.
 
 ```clj
-;;; In
+;;; Input
 {:width 10
  :height 20
  :weight 4
@@ -74,7 +77,7 @@ Every program basically transforms one set of data (input) into another set of d
 
 ;;; Some functions do their thing
 
-;;; Out
+;;; Output
 {:width 10
  :height 20
  :weight 4
@@ -85,7 +88,13 @@ Every program basically transforms one set of data (input) into another set of d
  :price 20}
 ```
 
-Here's where bottom-up comes into practice. Identify the missing data, then build the functions that derive that data. Additionally, try to return the same kind of data that comes in (this will be very useful for composing functions).
+### Transforming Data
+
+Now that we have the start and end of our journey through data, we can begin to think of solutions. But these solutions have a sharp focus: transforming data.
+
+1. Identify the next part of the data to update.
+2. Determine how to calculate the new data.
+3. Return a slighly updated version of the old data.
 
 * Add :price
 
