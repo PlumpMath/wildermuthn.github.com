@@ -18,7 +18,7 @@ Clojure gives me the tools to write in a functional style, but I've found myself
                     (and express? big?) 5
                     express? 3
                     big? 2
-                    :else 1)]]
+                    :else 1)]
     (* multiple weight)))
 ```
 
@@ -41,19 +41,20 @@ So how should I approach this according to Functional Programming principles? Wh
 
 ### Data
 
-First, put your configuration data where it belongs:
+First, put your data where it belongs: in immutable structures.
 
 ```clj
-(def config
- {:pricing
-   {:express 3
-     :big 2
-     :regular 1}
- :sizing
-   {:big-height 10
-    :big-width 10}
- :speed
-   {:express 2}})
+(def pricing
+  {:express 3
+   :big 2
+   :regular 1})
+
+(def sizing
+  {:big-height 10
+   :big-width 10})
+
+(def speed
+  {:express 2})
 ```
 
 ### More Data
@@ -110,10 +111,10 @@ Now that we have the start and end of our journey through data, we can begin to 
   [{:keys [express big regular]}
    {:keys [express? big?] :as package}]
   (->> (cond
-         (and express? big? (+ express big)
-              express? express
-              big? big
-              :else regular))
+         (and express? big?) (+ express big)
+         express? express
+         big? big
+         :else regular)
        (assoc package :multiplier)))
 ```
 
@@ -141,15 +142,16 @@ Now that we have the start and end of our journey through data, we can begin to 
 * Combine functions
 
 ```clj
-(defn add-shipping [{:keys [pricing sizing speed] :as config} package]
- (->> package
-      (add-big sizing)
-      (add-express speed)
-      (add-multiplier pricing)
-      add-price))
+(def add-props
+  (map
+    partial
+    [add-big add-express add-multiplier]        ;; first arg to partial
+    [sizing speed pricing]))                    ;; second arg to partial
+
+(def add-shipping (apply comp add-price add-props))
 ```
 
-Our final result couldn't be more clear. Here's where I jump for joy and declare my love for Functional Programming!
+Here's where I jump for joy and declare my love for Functional Programming! The use of `map`, `partial`, and `comp` is a sign that something has gone right.
 
 ## Value and Cost
 
