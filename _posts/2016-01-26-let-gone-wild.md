@@ -18,7 +18,7 @@ Clojure gives me the tools to write in a functional style, but I've found myself
                     (and express? big?) 5
                     express? 3
                     big? 2
-                    :else 1)]]
+                    :else 1)]
     (* multiple weight)))
 ```
 
@@ -110,10 +110,10 @@ Now that we have the start and end of our journey through data, we can begin to 
   [{:keys [express big regular]}
    {:keys [express? big?] :as package}]
   (->> (cond
-         (and express? big? (+ express big)
-              express? express
-              big? big
-              :else regular))
+         (and express? big?) (+ express big)
+         express? express
+         big? big
+         :else regular)
        (assoc package :multiplier)))
 ```
 
